@@ -9,6 +9,7 @@ export const LIGHTMOJIS = [
   '🦷',
   '🦓',
   '🧦',
+  '🥼',
 ];
 
 export const DARKMOJIS = [
@@ -22,6 +23,7 @@ export const DARKMOJIS = [
   '🎬',
   '🕋',
   '⬛️',
+  '🎥',
 ];
 
 export const REDMOJIS = [
@@ -35,6 +37,7 @@ export const REDMOJIS = [
   '🥊',
   '☎️',
   '🍅',
+  '🧲',
 ];
 
 export const YELLOWMOJIS = [
@@ -48,6 +51,7 @@ export const YELLOWMOJIS = [
   '🌝',
   '🐥',
   '🤓',
+  '💰',
 ];
 
 export const GREENMOJIS = [
@@ -61,6 +65,7 @@ export const GREENMOJIS = [
   '🥦',
   '🧃',
   '📗',
+  '🔫',
 ];
 
 export const BLUEMOJIS = [
@@ -73,7 +78,8 @@ export const BLUEMOJIS = [
   '🐟',
   '🥽',
   '🌊',
-  '📮',
+  '🚘',
+  '🌌',
 ];
 
 export const EMOJIS_LIST = [
