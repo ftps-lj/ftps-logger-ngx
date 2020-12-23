@@ -1,6 +1,8 @@
 {
   "name": "ftps-logger-ngx",
+  "description": "Generate and control clean, colorful messages to the console",
   "version": "1.0.0",
+  "homepage": "https://github.com/ftps-lj/ftps-logger-ngx",
   "peerDependencies": {
     "@angular/common": "^11.0.5",
     "@angular/core": "^11.0.5"
