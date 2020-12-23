@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * FTPS Logger Service. Log clean and colorful messages to the console, with level and module-specific control.
+ */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class FtpsLoggerNgxService {
-
-  constructor() { }
+export class FtpsLoggerService {
+  constructor() {}
 }

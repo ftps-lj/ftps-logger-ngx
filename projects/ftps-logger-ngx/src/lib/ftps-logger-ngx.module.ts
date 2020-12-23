@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { FtpsLoggerNgxComponent } from './ftps-logger-ngx.component';
 
-
-
+/**
+ * Module containing the FTPS Logger Service.
+ */
 @NgModule({
-  declarations: [FtpsLoggerNgxComponent],
-  imports: [
-  ],
-  exports: [FtpsLoggerNgxComponent]
+  declarations: [],
+  imports: [],
+  exports: [],
 })
-export class FtpsLoggerNgxModule { }
+export class FtpsLoggerModule {}
