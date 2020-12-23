@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ftps-logger-ngx": {
+      "projectType": "library",
+      "root": "projects/ftps-logger-ngx",
+      "sourceRoot": "projects/ftps-logger-ngx/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ftps-logger-ngx/tsconfig.lib.json",
+            "project": "projects/ftps-logger-ngx/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ftps-logger-ngx/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ftps-logger-ngx/src/test.ts",
+            "tsConfig": "projects/ftps-logger-ngx/tsconfig.spec.json",
+            "karmaConfig": "projects/ftps-logger-ngx/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ftps-logger-ngx/tsconfig.lib.json",
+              "projects/ftps-logger-ngx/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ftps-logger-ngx"
 }
