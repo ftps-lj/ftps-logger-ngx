@@ -94,7 +94,7 @@ export class FtpsLoggerService {
     const emojiPad = 5;
 
     console.groupCollapsed(
-      `${this.levels[level].padEnd(15, ' ')}`,
+      `${this.levels[level].padEnd(12, ' ')}`,
       randomEmoji.padStart(emojiPad, ' '),
       `[${module}]`.padEnd(padLength, ' '),
       title

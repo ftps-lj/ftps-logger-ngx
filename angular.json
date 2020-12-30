@@ -42,6 +42,127 @@
           }
         }
       }
+    },
+    "ftps-logger-tester": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "inlineStyle": true
+        }
+      },
+      "root": "projects/ftps-logger-tester",
+      "sourceRoot": "projects/ftps-logger-tester/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ftps-logger-tester",
+            "index": "projects/ftps-logger-tester/src/index.html",
+            "main": "projects/ftps-logger-tester/src/main.ts",
+            "polyfills": "projects/ftps-logger-tester/src/polyfills.ts",
+            "tsConfig": "projects/ftps-logger-tester/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ftps-logger-tester/src/favicon.ico",
+              "projects/ftps-logger-tester/src/assets"
+            ],
+            "styles": [
+              "projects/ftps-logger-tester/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ftps-logger-tester/src/environments/environment.ts",
+                  "with": "projects/ftps-logger-tester/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ftps-logger-tester:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ftps-logger-tester:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ftps-logger-tester:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ftps-logger-tester/src/test.ts",
+            "polyfills": "projects/ftps-logger-tester/src/polyfills.ts",
+            "tsConfig": "projects/ftps-logger-tester/tsconfig.spec.json",
+            "karmaConfig": "projects/ftps-logger-tester/karma.conf.js",
+            "assets": [
+              "projects/ftps-logger-tester/src/favicon.ico",
+              "projects/ftps-logger-tester/src/assets"
+            ],
+            "styles": [
+              "projects/ftps-logger-tester/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ftps-logger-tester/tsconfig.app.json",
+              "projects/ftps-logger-tester/tsconfig.spec.json",
+              "projects/ftps-logger-tester/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ftps-logger-tester/e2e/protractor.conf.js",
+            "devServerTarget": "ftps-logger-tester:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ftps-logger-tester:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "ftps-logger-ngx"
