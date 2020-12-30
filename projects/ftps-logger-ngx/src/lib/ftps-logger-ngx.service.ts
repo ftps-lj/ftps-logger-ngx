@@ -90,7 +90,7 @@ export class FtpsLoggerService {
     }
 
     const randomEmoji = this.getRandomEmoji(module);
-    const padLength = 35;
+    const padLength = 10;
     const emojiPad = 5;
 
     console.groupCollapsed(
