@@ -1,7 +1,7 @@
 {
   "name": "ftps-logger-ngx",
   "description": "A logger with feelings.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/ftps-lj/ftps-logger-ngx",
   "peerDependencies": {
     "@angular/common": "^11.0.5",

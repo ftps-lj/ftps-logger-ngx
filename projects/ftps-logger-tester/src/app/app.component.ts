@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     this.logger.logDebug('Test', 'Test Debug Message');
     this.logger.logSuccess('Test', 'Test Success Message');
     this.logger.logWarning('Test', 'Test Warning Message');
-    this.logger.logError('Test', 'Test Error Message');
+    this.logger.logError('Test', 'Test Error Message', 'More Error Details Here');
     this.logger.logInfo('Test', 'Test Info Message');
   }
 }

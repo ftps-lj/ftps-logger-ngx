@@ -93,7 +93,13 @@ export class FtpsLoggerService {
     const padLength = 35;
     const emojiPad = 5;
 
-    console.groupCollapsed(
+    // console.groupCollapsed(
+    //   `${this.levels[level].padEnd(12, ' ')}`,
+    //   randomEmoji.padStart(emojiPad, ' '),
+    //   `[${module}]`.padEnd(padLength, ' '),
+    //   title
+    // );
+    console.log(
       `${this.levels[level].padEnd(12, ' ')}`,
       randomEmoji.padStart(emojiPad, ' '),
       `[${module}]`.padEnd(padLength, ' '),
@@ -119,7 +125,7 @@ export class FtpsLoggerService {
         }
       }
     }
-    console.groupEnd();
+    // console.groupEnd();
   }
 
   private getRandomEmoji(module: string): string {
